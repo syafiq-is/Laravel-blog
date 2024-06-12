@@ -1,0 +1,97 @@
+:root {
+    --color-brand: #ef2c21;
+}
+
+/* Dark Scrollbar */
+html {
+    color-scheme: dark;
+}
+::selection {
+    background-color: var(--color-brand);
+}
+
+/* Custom element */
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none !important;
+    border-color: var(--color-brand) !important;
+    box-shadow: 0 0 10px var(--color-brand) !important;
+}
+option:hover {
+    background-color: red !important;
+}
+
+#pagination * {
+    color: white;
+}
+#pagination .page-item.active .page-link {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+}
+
+/* Custom color */
+.bg-brand {
+    background-color: var(--color-brand) !important;
+}
+.text-brand {
+    color: var(--color-brand) !important;
+}
+.text-hover-brand:hover {
+    color: var(--color-brand) !important;
+}
+
+/* Custom button */
+.btn-brand {
+    background-color: var(--color-brand) !important;
+}
+.btn-brand:hover {
+    filter: saturate(85%) !important;
+}
+
+.btn-outline-brand {
+    background-color: transparent !important;
+    border-color: var(--color-brand);
+    color: var(--color-brand);
+}
+.btn-outline-brand:hover {
+    background-color: var(--color-brand) !important;
+    color: white;
+}
+
+/* Custom hover */
+.hover-underline {
+    text-decoration: none;
+}
+.hover-underline:hover {
+    text-decoration: underline;
+}
+
+/* Auto grow textarea */
+.grow-wrap {
+    display: grid;
+}
+.grow-wrap::after {
+    content: attr(data-replicated-value) " ";
+
+    white-space: pre-wrap;
+
+    visibility: hidden;
+}
+.grow-wrap > textarea {
+    resize: none;
+
+    overflow: hidden;
+}
+.grow-wrap > textarea,
+.grow-wrap::after {
+    padding: 0.5rem;
+    font: inherit;
+
+    grid-area: 1 / 1 / 2 / 2;
+}
